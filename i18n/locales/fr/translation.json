@@ -1,0 +1,16 @@
+{
+  "home": "Accueil",
+  "services": "Services",
+  "resume": "curriculum vitae",
+  "work": "portfolio",
+  "contact": "contact",
+  "hireme": "Me recruter",
+  "job": "Développeur logiciel",
+  "hello": "Bonjour,",
+  "presentation": "Développeur junior qui aime relever de nouveaux défis et développer de belles applications web.",
+  "download": "Télécharder mon CV",
+  "Years of experience": "Années d'expérience",
+  "Projects completed": "Projets complétés",
+  "Technologies used": "Technologies utilisées",
+  "Commits done": "Commits effectués"
+}
