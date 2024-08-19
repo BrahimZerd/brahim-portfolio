@@ -34,7 +34,7 @@ const Stairs = () => {
               delay: reverseIndex(index) * 0.1,
             }}
             className={`h-[full] w-full ${
-              index === 2 || index === 5 ? "bg-accent" : "bg-white"
+              index === 3 || index === 5 ? "bg-accent" : "bg-white"
             } relative`}
           />
         );
