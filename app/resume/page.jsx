@@ -20,6 +20,8 @@ import {
 } from "react-icons/fa";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 
+import { useTranslation } from "react-i18next";
+
 //data
 const about = {
   title: "About me",
@@ -99,7 +101,7 @@ const education = {
 
 const skills = {
   title: "My skills",
-  description: "skills description",
+  description: "",
   skillslist: [
     {
       icon: <FaHtml5 />,
@@ -139,6 +141,7 @@ const skills = {
 };
 
 const Resume = () => {
+  const { t } = useTranslation();
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -154,17 +157,17 @@ const Resume = () => {
           defaultValue="experience"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="experience">{t("Experience")}</TabsTrigger>
+            <TabsTrigger value="education">{t("Education")}</TabsTrigger>
+            <TabsTrigger value="skills">{t("Skills")}</TabsTrigger>
+            <TabsTrigger value="about">{t("About me")}</TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <h3 className="text-4xl font-bold">{t(experience.title)}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experience.description}
+                  {t(experience.description)}
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] ">
@@ -188,9 +191,9 @@ const Resume = () => {
             </TabsContent>
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <h3 className="text-4xl font-bold">{t(education.title)}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {education.description}
+                  {t(education.description)}
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
@@ -214,7 +217,7 @@ const Resume = () => {
             </TabsContent>
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{skills.title}</h3>
+                <h3 className="text-4xl font-bold">{t(skills.title)}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {skills.description}
                 </p>
@@ -254,7 +257,9 @@ const Resume = () => {
                         key={index}
                         className="flex items-center justify-center xl:justify-start gap-4"
                       >
-                        <span className="text-white/60">{item.fieldname}</span>
+                        <span className="text-white/60">
+                          {t(item.fieldname)}
+                        </span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
                     );
