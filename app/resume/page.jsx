@@ -230,13 +230,10 @@ const Resume = () => {
                 <ul className="max-w-[600px] mx-auto xl:mx-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[20px]">
                   {skills.skillslist.map((item, index) => {
                     return (
-                      <TooltipProvider delayDuration={100}>
+                      <TooltipProvider key={index} delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger>
-                            <li
-                              key={index}
-                              className="bg-[#232329] h-[125px] w-[125px] rounded-xl flex flex-col justify-center items-center text-center"
-                            >
+                            <li className="bg-[#232329] h-[125px] w-[125px] rounded-xl flex flex-col justify-center items-center text-center">
                               <div className="hover:text-accent cursor-pointer text-6xl">
                                 {item.icon}
                               </div>
