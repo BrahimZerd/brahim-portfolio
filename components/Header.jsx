@@ -10,7 +10,6 @@ import MobileNav from "./MobileNav";
 import Nav from "./Nav";
 import { Button } from "./ui/button";
 
-console.log(i18next.language);
 const Header = () => {
   const [isLangue, setLang] = useState("");
   const { t } = useTranslation();
