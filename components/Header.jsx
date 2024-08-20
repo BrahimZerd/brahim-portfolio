@@ -52,21 +52,19 @@ const Header = () => {
         </Button>
         {/** mobile nav */}
         <div className="xl:hidden">
-          <MobileNav
-            children={
-              <Button
-                onClick={changeLang}
-                variant={"outline"}
-                className="items-center w-24 h-12"
-              >
-                <ReactCountryFlag
-                  style={{ width: "20px" }}
-                  countryCode={`${i18next.language === "fr" ? "FR" : "US"}`}
-                  svg
-                />
-              </Button>
-            }
-          />
+          <MobileNav>
+            <Button
+              onClick={changeLang}
+              variant={"outline"}
+              className="items-center w-24 h-12"
+            >
+              <ReactCountryFlag
+                style={{ width: "20px" }}
+                countryCode={`${i18next.language === "fr" ? "FR" : "US"}`}
+                svg
+              />
+            </Button>
+          </MobileNav>
         </div>
       </div>
     </header>

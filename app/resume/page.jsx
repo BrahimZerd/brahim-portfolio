@@ -173,7 +173,10 @@ const Resume = () => {
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] ">
                     {experience.items.map((item, index) => {
                       return (
-                        <li className="bg-[#232329] h-[185px]  py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start">
+                        <li
+                          key={index}
+                          className="bg-[#232329] h-[185px]  py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start"
+                        >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.position}
@@ -199,7 +202,10 @@ const Resume = () => {
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
-                        <li className="bg-[#232329] h-[185px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start">
+                        <li
+                          key={index}
+                          className="bg-[#232329] h-[185px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start"
+                        >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.position}
@@ -227,7 +233,10 @@ const Resume = () => {
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger>
-                            <li className="bg-[#232329] h-[125px] w-[125px] rounded-xl flex flex-col justify-center items-center text-center">
+                            <li
+                              key={index}
+                              className="bg-[#232329] h-[125px] w-[125px] rounded-xl flex flex-col justify-center items-center text-center"
+                            >
                               <div className="hover:text-accent cursor-pointer text-6xl">
                                 {item.icon}
                               </div>
