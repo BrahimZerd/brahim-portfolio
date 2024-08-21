@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import connectMongo from "@/lib/mongodb";
 import { useTranslation } from "react-i18next";
 import { FiDownload } from "react-icons/fi";
 
@@ -11,12 +12,14 @@ import Stats from "@/components/Stats";
 
 const Homepage = () => {
   const { t } = useTranslation();
+
+  connectMongo();
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div
           className="
-        flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24"
+        flex flex-col gap-8 xl:flex-row items-center justify-between xl:pt-8 xl:pb-24"
         >
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">{t("job")}</span>

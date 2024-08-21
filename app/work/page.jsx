@@ -94,7 +94,7 @@ const Work = () => {
                 {project.category} project
               </h2>
               <p className="text-white/60">{t(project.description)}</p>
-              <ul className="flex gap-4 capitalize ">
+              <ul className="flex gap-4 flex-col xl:flex-row capitalize ">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import StairTransition from "@/components/StairTransition";
+import { Toaster } from "@/components/ui/toaster";
 import { I18nProvider } from "@/i18n/i18n-context";
 import { detectLanguage } from "@/i18n/server";
 import { dir } from "i18next";
@@ -25,7 +26,10 @@ export default async function RootLayout({ children }) {
       <html lang={lng} dir={dir(lng)}>
         <body className={JetBrainsMono.className}>
           <Header />
+          <Toaster />
+
           <StairTransition />
+
           {children}
         </body>
       </html>

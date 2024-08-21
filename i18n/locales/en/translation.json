@@ -1,8 +1,8 @@
 {
-  "home": "home",
+  "home": "Home",
   "services": "Services",
-  "resume": "resume",
-  "work": "work",
+  "resume": "Resume",
+  "work": "Work",
   "contact": "contact",
   "hireme": "Hire me",
   "job": "Software Developer",
@@ -28,7 +28,6 @@
   "Phone number": "Phone number",
   "Type your message here": "Type your message here",
   "Send Message": "Send Message",
-
   "My education": "My education",
   "My skills": "My skills",
   "Languages": "Languages",
