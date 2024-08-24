@@ -32,7 +32,7 @@ const projects = [
       { name: "NextJS" },
     ],
     image: "/portfolioimage.jpg",
-    link: "brahimzerd.me",
+    link: "https://www.brahimzerd.me",
   },
   {
     num: "02",
@@ -48,7 +48,7 @@ const projects = [
       { name: "Figma" },
     ],
     image: "/portfolioimage3.jpg",
-    link: "app.everwave.xyz",
+    link: "https://marketplace.everwave.xyz",
   },
   {
     num: "03",
@@ -62,7 +62,7 @@ const projects = [
       { name: "Figma" },
     ],
     image: "/portfolioimage2.jpg",
-    link: "uniciteecreation.com",
+    link: "https://www.uniciteecreation.com",
   },
 ];
 
